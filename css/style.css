@@ -1,0 +1,197 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+}
+
+.transition-1 {
+    background: #9b59b6;
+    transition-property: background;
+    transition-duration: 500ms;
+}
+
+.transition-1:hover {
+    background: #2980b9;
+    transform: rotate(30deg);
+}
+
+
+
+.transition-3 {
+    background: #9b59b6;
+    transition: transform 500ms ease-in-out 500ms, background 500ms ease-in;
+}
+
+.transition-3:hover {
+    background: #2980b9;
+    transform: rotate(30deg);
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+/* Quand j'ai un hover sur .container, selectionne .box et applique le style */
+
+.container:hover .box {
+    width: 500px;
+}
+
+.timing-1 {
+    background-color: #2980b9;
+    transition-timing-function: linear;
+}
+
+.timing-2 {
+    background-color: #b95429;
+    transition-timing-function: ease-in;
+}
+
+.timing-3 {
+    background-color: #43b929;
+    transition-timing-function: ease-out;
+}
+
+.timing-4 {
+    background-color: #ad29b9;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+/* //////////////// */
+
+.polling_message {
+    color: white;
+    float: left;
+    margin-right: 2%;
+  }
+  
+  .view_port {
+    background-color: black;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .cylon_eye {
+    background-color: red;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.9) 75%
+    );
+    color: white;
+    height: 100%;
+    width: 20%;
+  
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    animation: 4s linear 0s infinite alternate move_eye;
+  }
+  
+  @-webkit-keyframes move_eye {
+    from {
+      margin-left: -20%;
+    }
+    to {
+      margin-left: 100%;
+    }
+  }
+  @keyframes move_eye {
+    from {
+      margin-left: -20%;
+    }
+    to {
+      margin-left: 100%;
+    }
+  }
+
+  /* /////////////////// */
+
+
+  .triangle-code {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 63px solid transparent;
+    border-bottom : 87px solid transparent;
+    border-left : 150px solid red;
+   }
+
+   .tourne {
+    transform: rotate(45deg); /* Équivalent à rotateZ(45deg) */
+    
+  }
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.rotating {
+    animation: rotating 2s linear infinite;
+  }
+
+.squarev2 {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+    background: red;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+  }
+  
+  .box:hover {
+    background-color: green;
+    cursor: pointer;
+  }
+
+
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .boxdiv {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+
+  
